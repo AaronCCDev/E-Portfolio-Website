@@ -1,0 +1,197 @@
+.arcadia-page{
+    width:100%;
+    min-height:100vh;
+
+    position:relative;
+    overflow-x:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+
+    text-align:center;
+
+    padding:80px 50px;
+}
+
+.arcadia-page::before{
+    content:"";
+
+    position:fixed;
+    inset:0;
+
+    background-image:url("../Assets/images/page\ \(3\).png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    z-index:-1;
+}
+
+.arcadia-content{
+    max-width:1300px;
+    animation:fadeUp 1s ease forwards;
+}
+
+.arcadia-title{
+    color:var(--primary);
+
+    font-size:clamp(45px,5vw,85px);
+    font-weight:400;
+
+    letter-spacing:4px;
+
+    margin-bottom:30px;
+}
+
+.arcadia-intro{
+    max-width:1050px;
+
+    margin:0 auto 45px;
+
+    font-size:clamp(18px,1.6vw,28px);
+    line-height:1.5;
+}
+
+.arcadia-highlight{
+    max-width:1050px;
+
+    margin:0 auto 60px;
+
+    padding:40px 50px;
+
+    border:2px solid rgba(255,122,26,.5);
+    border-radius:28px;
+
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(8px);
+}
+
+.arcadia-highlight h2{
+    color:var(--primary);
+
+    font-size:2.4rem;
+
+    margin-bottom:18px;
+}
+
+.arcadia-highlight p{
+    font-size:1.25rem;
+    line-height:1.6;
+}
+
+.arcadia-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+    margin-bottom:60px;
+}
+
+.arcadia-card{
+    min-height:240px;
+
+    padding:35px 30px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    border:2px solid rgba(255,122,26,.45);
+    border-radius:25px;
+
+    background:rgba(0,0,0,.4);
+    backdrop-filter:blur(8px);
+
+    transition:.3s ease;
+}
+
+.arcadia-card:hover{
+    transform:translateY(-8px);
+
+    border-color:var(--primary);
+
+    box-shadow:
+        0 0 15px rgba(255,122,26,.4),
+        0 0 30px rgba(255,122,26,.2);
+}
+
+.arcadia-card h2{
+    color:var(--primary);
+
+    font-size:1.8rem;
+
+    margin-bottom:18px;
+}
+
+.arcadia-card p{
+    font-size:1.1rem;
+    line-height:1.5;
+}
+
+.arcadia-note{
+    max-width:1000px;
+
+    margin:0 auto 60px;
+
+    padding:35px 45px;
+
+    border:2px solid rgba(255,122,26,.45);
+    border-radius:25px;
+
+    background:rgba(0,0,0,.4);
+    backdrop-filter:blur(8px);
+}
+
+.arcadia-note h2{
+    color:var(--primary);
+
+    font-size:2rem;
+
+    margin-bottom:18px;
+}
+
+.arcadia-note p{
+    font-size:1.15rem;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+.arcadia-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+}
+
+@media(max-width:1000px){
+
+    .arcadia-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:700px){
+
+    .arcadia-page{
+        padding:50px 20px;
+    }
+
+    .arcadia-grid{
+        grid-template-columns:1fr;
+    }
+
+    .arcadia-highlight,
+    .arcadia-note{
+        padding:28px 22px;
+    }
+
+    .arcadia-buttons{
+        flex-direction:column;
+    }
+}

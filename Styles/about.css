@@ -1,0 +1,55 @@
+.about-page{
+    width:100%;
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.about-page::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:url("../Assets/images/about.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    z-index:-1;
+}
+
+.about-content{
+    max-width:1250px;
+    opacity:0;
+    animation:fadeUp 1s ease forwards;
+}
+
+.about-title{
+    color:var(--primary);
+    font-size:clamp(42px,4vw,70px);
+    font-weight:400;
+    letter-spacing:4px;
+    margin-bottom:70px;
+}
+
+.about-text{
+    color:white;
+    font-size:clamp(26px,2vw,42px);
+    line-height:1.55;
+    max-width:1250px;
+    margin:0 auto 70px;
+}
+
+.about-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+}
+
+.about-btn{
+    padding:16px 80px;
+}

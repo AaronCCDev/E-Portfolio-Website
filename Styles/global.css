@@ -1,0 +1,107 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --primary:#ff7a1a;
+    --primary-hover:#ff9345;
+    --white:#ffffff;
+    --dark:#000000;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Anonymous Pro', monospace;
+    background:#000;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+.outline-btn{
+    width:300px;
+    height:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-family:'Anonymous Pro', monospace;
+    font-size:2rem;
+    font-weight:700;
+    color:white;
+    border:3px solid var(--primary);
+    border-radius:999px;
+    background:transparent;
+    transition:.3s ease;
+}
+
+.outline-btn:hover{
+    background:var(--primary);
+    color:black;
+    box-shadow:
+        0 0 15px rgba(255,122,26,.4),
+        0 0 30px rgba(255,122,26,.2);
+    transform:translateY(-3px);
+}
+
+@keyframes bgZoomOut{
+    from{
+        transform:scale(1.15);
+    }
+
+    to{
+        transform:scale(1);
+    }
+}
+
+@keyframes slideInLeft{
+    from{
+        opacity:0;
+        transform:translateX(-80px);
+        filter:blur(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+        filter:blur(0);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+        filter:blur(8px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+        filter:blur(0);
+    }
+}
+
+@keyframes revealLetter{
+    0%{
+        opacity:0;
+        transform:translateY(40px);
+        filter:blur(10px);
+    }
+
+    60%{
+        opacity:1;
+        transform:translateY(-4px);
+        filter:blur(0);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0);
+        filter:blur(0);
+    }
+}
