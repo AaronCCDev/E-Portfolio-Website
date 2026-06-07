@@ -60,26 +60,3 @@
 .contact-item a:hover{
     color:var(--primary);
 }
-
-.contact-back-btn{
-    display:inline-flex;
-    justify-content:center;
-    align-items:center;
-    width:350px;
-    height:70px;
-    text-decoration:none;
-    color:white;
-    border:3px solid var(--primary);
-    border-radius:999px;
-    font-size:1.4rem;
-    transition:.3s ease;
-}
-
-.contact-back-btn:hover{
-    background:var(--primary);
-    color:black;
-    transform:translateY(-3px);
-    box-shadow:
-        0 0 15px rgba(255,122,26,.4),
-        0 0 30px rgba(255,122,26,.2);
-}
