@@ -53,3 +53,35 @@
 .about-btn{
     padding:16px 80px;
 }
+
+@media (max-width:768px){
+
+    .about-page{
+        height:auto;
+        min-height:100vh;
+        padding:40px 25px;
+    }
+
+    .about-title{
+        font-size:clamp(34px,10vw,52px);
+        margin-bottom:40px;
+        letter-spacing:2px;
+    }
+
+    .about-text{
+        font-size:clamp(18px,5vw,24px);
+        line-height:1.6;
+        margin:0 auto 40px;
+    }
+
+    .about-buttons{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .outline-btn,
+    .about-btn{
+        width:260px;
+        text-align:center;
+    }
+}
