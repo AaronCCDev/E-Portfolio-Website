@@ -25,6 +25,8 @@
     position:relative;
     z-index:2;
     animation:fadeUp 1s ease forwards;
+    width: 100%;
+    max-width: 700px;
 }
 
 .contents-title{
