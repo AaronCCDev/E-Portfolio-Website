@@ -5,7 +5,7 @@
     overflow:hidden;
     display:flex;
     align-items:center;
-    padding-left:120px;
+    padding-inline: clamp(20px, 5vw, 120px);
 }
 
 .contents-page::before{
